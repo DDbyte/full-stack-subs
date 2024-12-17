@@ -1,0 +1,28 @@
+
+
+The student restaurant of the University of Helsinki Unicafe collects feedback from its customers. Implement a web application 
+for collecting customer feedback. There are only three options for feedback: good, neutral, and bad.
+The application must display the total number of collected feedback for each category.
+Once you refresh the page, the collected feedback is allowed to disappear.
+More statistics about the gathered feedback: the total number of collected feedback, the average score (good: 1, neutral: 0, bad: -1)
+and the percentage of positive feedback.
+Components should not be defined inside other components.
+Display statistics only once feedback has been gathered.
+Button handles the functionality of each feedback submission button.
+StatisticLine for displaying a single statistic, e.g. the average score.
+
+useState tracks the number of "good," "neutral," and "bad" feedback.
+The Buttons component handles user interaction via buttons and updates the state in the parent (App) using callbacks.
+The Statistics component dynamically calculates statistics and displays them based on the state passed from the parent.
+If no feedback is given (total === 0), the app displays "No feedback given."
+The StatisticLine component renders a single statistic, with a label and a value passed as props.
+Statistics Component use StatisticLine for each one.
+The positivePercentage value is formatted as a percentage with 1 decimal.
+Separating the display logic (StatisticLine) from the calculation logic (Statistics) makes the code modular and reusable.
+A table is used for displaying multiple rows of statistics.
+
+
+
+
+
+
