@@ -1,0 +1,25 @@
+//component
+const CountryDetails = ({ country }) => (
+    <div>
+      <h2>{country.name.common}</h2>
+      <p>Capital: <strong>{country.capital}</strong></p>
+      <p>Area: {country.area}</p>
+      <p><strong>Languages:</strong></p>
+      <ul>
+        {Object.values(country.languages).map(lang => (
+          <li key={lang}>{lang}</li>
+        ))}
+      </ul>
+      <img src={country.flags.png} alt={`Flag of ${country.name.common}`} width="150" />
+    </div>
+  )
+
+export default CountryDetails
+//end component
+
+command:
+($env:VITE_SOME_KEY="54l41n3n4v41m34rv0") -and (npm run dev) // For Windows PowerShell
+set "VITE_SOME_KEY=54l41n3n4v41m34rv0" && npm run dev // For Windows cmd.execopy
+
+you can access the value of the key from the import.meta.env object:
+const api_key = import.meta.env.VITE_SOME_KEY  // variable api_key now has the value set in startup

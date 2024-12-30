@@ -1,0 +1,17 @@
+Exercises 2.1 - 2.5
+
+Define a component responsible for formatting a single course called Course, 
+must work regardless of the number of parts a course has:
+
+App component, contains the course data and passes it to Course
+    Course compoment(prop-course obj),calc total num of exercises using reduce(),delegates to child compoments:      
+        Header(course) => course name, 
+        Content(parts) => list of Parts components using map() to ensure scalability       
+            Parts component (get a single part obj based on part.id) => name, num exercises
+        Total(sum) => total num of exercises
+
+Extend our application to allow for an arbitrary number of courses:
+
+Updeated Course compoment in order to accept an array of courses as prop, 
+Loop the courses array using map(),
+Total calc inside the Total compoment call.
